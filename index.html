@@ -37,28 +37,8 @@
       overflow-x: hidden;
     }
     h1, h2 { letter-spacing: -0.06em; text-transform: uppercase; color: #0a0f1a; font-weight: 600; }
-    /* Section headings: centered and balanced on desktop, excluding layout-specific sections */
-    @media (min-width: 769px) {
-      section h2 { text-wrap: balance; }
-      /* Center headings for full-width sections only */
-      #for-whom .mb-14 h2,
-      #not-for-whom h2,
-      #stats h2,
-      .faq-section h2,
-      .reviews-section h2,
-      .companies-section h2,
-      .closing-cta-section h2,
-      #faq h2,
-      #playbooks h2 { text-align: center; }
-      /* Center all mono-labels in section headers on desktop */
-      .reviews-section .mb-12 p.mono-label,
-      .faq-section .mb-12 p.mono-label { text-align: center; }
-      .reviews-section .mb-12 h2,
-      .faq-section .mb-12 h2 { text-align: center; }
-      /* The for-whom label also centered */
-      #for-whom .mb-14 { text-align: center; }
-      #for-whom .mb-14 p { margin-left: auto; margin-right: auto; }
-    }
+    /* Section headings: centered and balanced on all screen sizes */
+    section h2 { text-align: center; text-wrap: balance; }
     .hero-title {
       font-size: clamp(2.4rem, 8vw, 5.5rem) !important;
       white-space: normal !important; word-break: break-word !important;
@@ -90,14 +70,8 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.04), 0 25px 80px -35px rgba(99,102,241,0.25), inset 0 1px 0 rgba(255,255,255,0.8);
     }
     header nav a { transition: color 0.3s ease; }
-    .hero-section {
-      padding-top: clamp(9rem, 20vh, 14rem);
-      padding-bottom: clamp(3rem, 7vh, 6rem);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-    .hero-layout { display: flex; align-items: flex-start; gap: clamp(2rem, 4vw, 4rem); width: 100%; }
+    .hero-section { padding-top: clamp(9rem, 20vh, 14rem); padding-bottom: clamp(3rem, 7vh, 6rem); }
+    .hero-layout { display: flex; align-items: flex-start; gap: clamp(2rem, 4vw, 4rem); }
     .hero-pill {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
       font-size: 0.6rem !important; letter-spacing: 0.25em !important; text-transform: uppercase;
@@ -460,27 +434,27 @@
 
     /* ===== PRICE STYLES ON CARDS ===== */
     .course-price-wrap {
-      display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-top: auto;
-      padding: 0.75rem 0.85rem; border-radius: 12px;
+      display: flex; align-items: center; flex-wrap: nowrap; gap: 0.5rem; margin-top: auto;
+      padding: 0.85rem 1rem; border-radius: 12px;
       background: rgba(255,255,255,0.35); backdrop-filter: blur(8px);
       border: 1px solid rgba(255,255,255,0.5);
     }
     .price-new {
-      font-size: 1.25rem; font-weight: 800; color: #0f172a; letter-spacing: -0.04em; white-space: nowrap; flex-shrink: 0;
+      font-size: 1.4rem; font-weight: 800; color: #0f172a; letter-spacing: -0.04em; white-space: nowrap; flex-shrink: 0;
     }
     .price-old {
-      font-size: 0.75rem; font-weight: 500; color: #94a3b8;
+      font-size: 0.8rem; font-weight: 500; color: #94a3b8;
       text-decoration: line-through; white-space: nowrap; flex-shrink: 0;
     }
     .discount-reason {
-      font-size: 0.6rem; color: #64748b; font-style: italic; flex-shrink: 1; min-width: 0;
-      line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      font-size: 0.65rem; color: #64748b; font-style: italic; flex: 1; min-width: 0;
+      line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .price-discount {
-      font-size: 0.6rem; font-weight: 700; padding: 0.2rem 0.45rem;
+      font-size: 0.62rem; font-weight: 700; padding: 0.25rem 0.55rem;
       border-radius: 999px; background: rgba(34,197,94,0.18); color: #16a34a;
       font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;
-      white-space: nowrap; flex-shrink: 0; margin-left: auto;
+      white-space: nowrap; flex-shrink: 0;
     }
     .popular-badge {
       position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
@@ -1369,15 +1343,13 @@
     <!-- #1 — TEACHER SECTION -->
     <section class="teacher-section" id="teacher">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div style="text-align:center;margin-bottom:2.5rem;">
-          <p class="mono-label text-slate-500 tracking-[0.4em] text-[10px] mb-4 text-center">ПРЕПОДАВАТЕЛЬ</p>
-        </div>
-        <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-          <div class="flex-shrink-0" style="display:flex;flex-direction:column;align-items:center;">
+        <p class="mono-label text-slate-500 tracking-[0.4em] text-[10px] mb-8 text-center">ПРЕПОДАВАТЕЛЬ</p>
+        <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+          <div class="flex-shrink-0">
             <div class="teacher-avatar">👨‍💻</div>
           </div>
           <div class="flex-1">
-            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-1" style="text-transform: none; letter-spacing: -0.04em; text-align:left;">Александр Морозов</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-1" style="text-transform: none; letter-spacing: -0.04em;">Александр Морозов</h2>
             <p class="text-indigo-400 font-mono text-sm mb-6 tracking-wide">AI-инженер · 6 лет в автоматизации бизнеса</p>
             <div class="space-y-3">
               <div class="teacher-fact">
@@ -1412,29 +1384,35 @@
             padding: 2rem; border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.12);
             background: rgba(255,255,255,0.04);
-            transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.35s ease;
             display: flex; flex-direction: column; height: 100%;
           }
           .fw-card::before {
             content: ''; position: absolute;
-            inset: 0; opacity: 0;
-            transition: opacity 0.4s ease;
+            inset: 0; opacity: 1;
             pointer-events: none; border-radius: 24px;
           }
-          .fw-card:hover { transform: scale(1.03) translateY(-3px); }
-          .fw-card:hover::before { opacity: 1; }
 
-          .fw-card-indigo { --fw-clr: #6366f1; --fw-glow: rgba(99,102,241,0.18); --fw-glow2: rgba(99,102,241,0.06); box-shadow: 0 0 50px -12px rgba(99,102,241,0.35), inset 0 1px 0 rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.25); }
+          /* Постоянное свечение — убраны :hover, применены значения из hover-состояния */
+          .fw-card-indigo {
+            --fw-clr: #6366f1;
+            box-shadow: 0 0 70px -8px rgba(99,102,241,0.5), inset 0 1px 0 rgba(99,102,241,0.25);
+            border-color: rgba(99,102,241,0.4);
+          }
           .fw-card-indigo::before { background: radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.22) 0%, transparent 65%); }
-          .fw-card-indigo:hover { box-shadow: 0 0 70px -8px rgba(99,102,241,0.5), inset 0 1px 0 rgba(99,102,241,0.25); border-color: rgba(99,102,241,0.4); }
 
-          .fw-card-crimson { --fw-clr: #f43f5e; --fw-glow: rgba(244,63,94,0.18); --fw-glow2: rgba(244,63,94,0.06); box-shadow: 0 0 50px -12px rgba(244,63,94,0.32), inset 0 1px 0 rgba(244,63,94,0.12); border-color: rgba(244,63,94,0.22); }
+          .fw-card-crimson {
+            --fw-clr: #f43f5e;
+            box-shadow: 0 0 70px -8px rgba(244,63,94,0.48), inset 0 1px 0 rgba(244,63,94,0.22);
+            border-color: rgba(244,63,94,0.38);
+          }
           .fw-card-crimson::before { background: radial-gradient(ellipse at 30% 20%, rgba(244,63,94,0.22) 0%, transparent 65%); }
-          .fw-card-crimson:hover { box-shadow: 0 0 70px -8px rgba(244,63,94,0.48), inset 0 1px 0 rgba(244,63,94,0.22); border-color: rgba(244,63,94,0.38); }
 
-          .fw-card-amber { --fw-clr: #f59e0b; --fw-glow: rgba(245,158,11,0.18); --fw-glow2: rgba(245,158,11,0.06); box-shadow: 0 0 50px -12px rgba(245,158,11,0.28), inset 0 1px 0 rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.22); }
+          .fw-card-amber {
+            --fw-clr: #f59e0b;
+            box-shadow: 0 0 70px -8px rgba(245,158,11,0.45), inset 0 1px 0 rgba(245,158,11,0.22);
+            border-color: rgba(245,158,11,0.38);
+          }
           .fw-card-amber::before { background: radial-gradient(ellipse at 30% 20%, rgba(245,158,11,0.22) 0%, transparent 65%); }
-          .fw-card-amber:hover { box-shadow: 0 0 70px -8px rgba(245,158,11,0.45), inset 0 1px 0 rgba(245,158,11,0.22); border-color: rgba(245,158,11,0.38); }
 
           .fw-icon-wrap {
             width: 56px; height: 56px; border-radius: 16px;
@@ -1471,10 +1449,10 @@
           }
         </style>
 
-        <div class="mb-14" style="text-align:center;">
-          <p class="mono-label tracking-[0.4em] text-[10px]" style="color:rgba(255,255,255,0.35);display:block;text-align:center;">ДЛЯ КОГО</p>
-          <h2 class="tracking-tighter text-3xl sm:text-4xl font-bold mt-3" style="color:white;text-transform:uppercase;letter-spacing:-0.05em;text-align:center;">Это точно для тебя, если...</h2>
-          <p style="color:rgba(255,255,255,0.45);font-size:0.95rem;margin-top:0.75rem;max-width:420px;line-height:1.6;margin-left:auto;margin-right:auto;">Достаточно одного совпадения — остальное мы берём на себя.</p>
+        <div class="mb-14">
+          <p class="mono-label tracking-[0.4em] text-[10px]" style="color:rgba(255,255,255,0.35);">ДЛЯ КОГО</p>
+          <h2 class="tracking-tighter text-3xl sm:text-4xl font-bold mt-3" style="color:white;text-transform:uppercase;letter-spacing:-0.05em;">Это точно для тебя, если...</h2>
+          <p style="color:rgba(255,255,255,0.45);font-size:0.95rem;margin-top:0.75rem;max-width:420px;line-height:1.6;">Достаточно одного совпадения — остальное мы берём на себя.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
@@ -1959,7 +1937,10 @@
                     <div style="width:11px;height:11px;border-radius:50%;background:#22c55e;"></div>
                   </div>
                   <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.2em;flex:1;">HEIST_AI_PLAYBOOK_ЮРИСТЫ.PDF</div>
-                  <!-- LIVE badge removed -->
+                  <div style="display:flex;align-items:center;gap:4px;">
+                    <div style="width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,0.8);animation:pb-glow-pulse 2s ease-in-out infinite;"></div>
+                    <span style="font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:#22c55e;letter-spacing:0.1em;">LIVE</span>
+                  </div>
                 </div>
 
                 <!-- File body — document content -->
@@ -2543,12 +2524,12 @@ n8n Workflow #1 — Входящие заявки:
     </section>
 
     <!-- #10 — NOT FOR WHOM -->
-    <section class="not-for-whom-section section-dark" id="not-for-whom" style="padding:3rem 0 5rem;overflow:visible;">
+    <section class="not-for-whom-section section-dark" id="not-for-whom" style="padding:5rem 0 5rem;overflow:visible;">
       <div class="max-w-3xl mx-auto px-6 lg:px-12">
-        <div style="margin-bottom:2.5rem;">
-          <p class="mono-label tracking-[0.4em] text-[10px]" style="color:rgba(255,255,255,0.4)!important;text-align:center;">ЧЕСТНО</p>
-          <h2 class="tracking-tighter text-2xl sm:text-3xl font-bold mt-3" style="color:white!important;text-transform:uppercase;letter-spacing:-0.05em;text-align:center;margin-bottom:1rem;">Кому курсы не подойдут</h2>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)!important;text-align:center;">Лучше сказать прямо, чем потом просить возврат.</p>
+        <div class="mb-10">
+          <p class="mono-label tracking-[0.4em] text-[10px]" style="color:rgba(255,255,255,0.4)!important;">ЧЕСТНО</p>
+          <h2 class="tracking-tighter text-2xl sm:text-3xl font-bold mt-4" style="color:white!important;text-transform:uppercase;letter-spacing:-0.05em;">Кому курсы не подойдут</h2>
+          <p class="text-sm mt-3 leading-relaxed" style="color:rgba(255,255,255,0.45)!important;">Лучше сказать прямо, чем потом просить возврат.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
           <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
