@@ -1556,13 +1556,13 @@
             <p class="text-slate-500 text-sm leading-relaxed">Каждый курс — 4 недели практики и первый реальный клиент.
        Нажми → увидишь полную программу</p>
             <!-- Mini stats -->
-            <div class="courses-stats-row" style="display:flex;gap:1.5rem;margin-top:1rem;">
-              <div>
+            <div class="courses-stats-row" style="display:flex;gap:1.5rem;margin-top:1rem;justify-content:center;align-items:center;">
+              <div style="text-align:center;">
                 <div style="font-size:1.3rem;font-weight:800;color:#0f172a;letter-spacing:-0.04em;line-height:1;">4 нед</div>
                 <div style="font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:#94a3b8;letter-spacing:0.15em;text-transform:uppercase;margin-top:2px;">до первого клиента</div>
               </div>
-              <div style="width:1px;background:rgba(15,23,42,0.08);"></div>
-              <div>
+              <div style="width:1px;height:2rem;background:rgba(15,23,42,0.08);"></div>
+              <div style="text-align:center;">
                 <div style="font-size:1.3rem;font-weight:800;color:#0f172a;letter-spacing:-0.04em;line-height:1;">73%</div>
                 <div style="font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:#94a3b8;letter-spacing:0.15em;text-transform:uppercase;margin-top:2px;">находят клиента за 30 дней</div>
               </div>
@@ -2174,8 +2174,8 @@ n8n Workflow #1 — Входящие заявки:
           <p class="mono-label text-slate-500 tracking-[0.4em] text-[10px]" style="display:block;margin-bottom:0.75rem;">ОТЗЫВЫ</p>
           <h2 class="tracking-tighter text-3xl sm:text-4xl font-semibold text-slate-900">Реальные результаты. Реальные цифры.</h2>
         </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Review 1 -->
+        <div class="grid md:grid-cols-1 gap-6" style="max-width:600px;margin:0 auto;">
+          <!-- Single merged review -->
           <div class="review-card">
             <div class="flex items-start gap-3 mb-4">
               <div class="review-avatar" style="background: linear-gradient(135deg, #6366f1, #881337);">Д</div>
@@ -2188,34 +2188,6 @@ n8n Workflow #1 — Входящие заявки:
             <div class="review-result" style="background: rgba(34,197,94,0.1); color: #16a34a; border: 1px solid rgba(34,197,94,0.2);">60 000₽/мес стабильно</div>
             <div class="review-stars">★★★★★</div>
             <p class="review-text">Честно — думал что это очередной инфокурс. Оказалось нет. На второй неделе сделал автоматизацию документооборота для юрфирмы. Клиент сразу подписал договор. Сейчас веду уже трёх таких клиентов.</p>
-          </div>
-          <!-- Review 2 -->
-          <div class="review-card">
-            <div class="flex items-start gap-3 mb-4">
-              <div class="review-avatar" style="background: linear-gradient(135deg, #f59e0b, #ea580c);">А</div>
-              <div>
-                <div class="font-bold text-slate-900 text-sm">Анна Р.</div>
-                <a href="https://t.me/student_2" style="color:#6366f1;font-size:0.75rem;">@student_2</a>
-                <div class="review-meta">Казань · Курс База ИИ</div>
-              </div>
-            </div>
-            <div class="review-result" style="background: rgba(99,102,241,0.1); color: #4f46e5; border: 1px solid rgba(99,102,241,0.2);">Первый контракт 45 000₽</div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">У меня не было никакого технического бэкграунда. Сделала чат-бота для частной клиники — запись пациентов и напоминания о приёмах. За первый месяц заработала 45 000₽. Сейчас беру ещё два проекта.</p>
-          </div>
-          <!-- Review 4 -->
-          <div class="review-card">
-            <div class="flex items-start gap-3 mb-4">
-              <div class="review-avatar" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">Е</div>
-              <div>
-                <div class="font-bold text-slate-900 text-sm">Елена В.</div>
-                <a href="https://t.me/student_4" style="color:#6366f1;font-size:0.75rem;">@student_4</a>
-                <div class="review-meta">Санкт-Петербург · Курс Вайбкодинг</div>
-              </div>
-            </div>
-            <div class="review-result" style="background: rgba(59,130,246,0.1); color: #2563eb; border: 1px solid rgba(59,130,246,0.2);">MVP за 3 дня</div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">Без единой строки кода раньше. Сделала SaaS для автоматической генерации описаний товаров — уже 12 платящих клиентов на подписке. Александр объясняет так, что понимаешь с первого раза.</p>
           </div>
         </div>
 
@@ -2341,12 +2313,12 @@ n8n Workflow #1 — Входящие заявки:
 
           <div class="ss-grid" style="grid-template-columns:repeat(2,1fr);max-width:780px;margin:0 auto;">
 
-            <!-- Screenshot 1: реальное фото -->
+            <!-- Screenshot 1 — Дмитрий К. часть 1 -->
             <div class="ss-card">
               <div class="ss-photo" style="aspect-ratio:590/1280;">
                 <img
-                  src="assets/otziv1.jpg"
-                  alt="Отзыв студента 1"
+                  src="otziv1.jpg"
+                  alt="Отзыв Дмитрий К. — часть 1"
                   loading="lazy"
                   decoding="async"
                   style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"
@@ -2364,12 +2336,12 @@ n8n Workflow #1 — Входящие заявки:
               </div>
             </div>
 
-            <!-- Screenshot 2: реальное фото -->
+            <!-- Screenshot 2 — Дмитрий К. часть 2 -->
             <div class="ss-card">
               <div class="ss-photo" style="aspect-ratio:590/1280;">
                 <img
-                  src="assets/otziv2.jpg"
-                  alt="Отзыв студента 2"
+                  src="otziv2.jpg"
+                  alt="Отзыв Дмитрий К. — часть 2"
                   loading="lazy"
                   decoding="async"
                   style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"
@@ -2377,13 +2349,13 @@ n8n Workflow #1 — Входящие заявки:
               </div>
               <div class="ss-footer">
                 <div class="ss-person">
-                  <div class="ss-person-av" style="background:linear-gradient(135deg,#f59e0b,#ea580c);">А</div>
+                  <div class="ss-person-av" style="background:linear-gradient(135deg,#6366f1,#4338ca);">Д</div>
                   <div>
-                    <div class="ss-person-name">Анна Р.</div>
-                    <div class="ss-person-sub">Казань · База ИИ</div>
+                    <div class="ss-person-name">Дмитрий К.</div>
+                    <div class="ss-person-sub">Москва · n8n Автоматизация</div>
                   </div>
                 </div>
-                <div class="ss-result-tag" style="background:rgba(99,102,241,0.1);color:#4f46e5;border:1px solid rgba(99,102,241,0.2);">🏥 45 000₽ первый</div>
+                <div class="ss-result-tag" style="background:rgba(34,197,94,0.1);color:#16a34a;border:1px solid rgba(34,197,94,0.2);">💰 60 000₽/мес</div>
               </div>
             </div>
 
@@ -2506,7 +2478,7 @@ n8n Workflow #1 — Входящие заявки:
             <div class="access-step-num">02</div>
             <div style="width:44px;height:44px;border-radius:12px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.22);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem;">💳</div>
             <h3 style="font-size:1rem;font-weight:700;color:white;margin-bottom:0.5rem;text-transform:none;letter-spacing:-0.02em;">Оплати удобным способом</h3>
-            <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;">СБП, карта или крипта. Стоимость — <span style="color:#4ade80;font-weight:600;">7 000₽ сейчас.</span> 1 апреля цена будет без скидки</p>
+            <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;">СБП, карта или крипта. Стоимость — <span style="color:#4ade80;font-weight:600;">от 5 000₽.</span> 1 апреля цена будет без скидки</p>
           </div>
 
           <!-- Step 3 -->
@@ -2861,6 +2833,7 @@ n8n Workflow #1 — Входящие заявки:
     const courses = {
       n8n: {
         label: 'n8n Advanced', title: 'АВТОМАТИЗАЦИЯ БИЗНЕСА',
+        price: '7 000₽', priceOld: '12 000₽', discount: '-42%',
         accent: '#881337', accentLight: '#be123c', accentDark: '#6b0f2b',
         description: '7 уроков от первого логина до боевого AI-юриста. Поднимаешь сервер, подключаешь GPT-4 через OpenRouter без VPN, строишь агентов с памятью и сразу получаешь 3 готовых услуги для продажи клиентам. Создать бота — разовая продажа. Обслуживать инфраструктуру — пассивный доход каждый месяц.',
         timeline: ['Интерфейс & Сервер', 'Первый AI-агент', 'Домен & OpenRouter', 'Google Suite', 'Обновления & Безопасность', 'AI-Юрист кейс', 'Продажа & Масштаб'],
@@ -2890,6 +2863,7 @@ n8n Workflow #1 — Входящие заявки:
       },
       'ai-base': {
         label: 'AI Foundation', title: 'ФУНДАМЕНТ ИИ',
+        price: '5 000₽', priceOld: '12 000₽', discount: '-58%',
         accent: '#4C51BF', accentLight: '#6366f1', accentDark: '#3730a3',
         description: 'Нейросеть — это экзоскелет. Она усиливает тебя. Если ты специалист — делает тебя ×100. Если ты ноль — усилит ноль. Разбираемся как работают LLM на самом деле, почему ИИ галлюцинирует, и как давать задачи так, чтобы на выходе получать продукт за который платят.',
         timeline: ['Как думает ИИ', 'Правильные запросы', '5 денежных активностей', 'Инструмент под задачу', 'Первый оплачиваемый кейс'],
@@ -2917,6 +2891,7 @@ n8n Workflow #1 — Входящие заявки:
       },
       vibe: {
         label: 'Vibecoding Elite', title: 'ВАЙБКОДИНГ',
+        price: '5 000₽', priceOld: '12 000₽', discount: '-58%',
         accent: '#F97316', accentLight: '#FB923C', accentDark: '#EA580C',
         description: 'Cursor, Windsurf, Replit — выбираешь среду, даёшь задачу на русском, получаешь рабочий продукт. SaaS с базой данных и авторизацией — за 4 часа первого вечера. Раньше идея умирала на бумаге. Теперь живёт на сервере через 48 часов и продаётся на Product Hunt.',
         timeline: ['Выбор среды', 'Web-App за вечер', 'Telegram Mini App', 'Desktop & .EXE', 'Запуск и продажа'],
@@ -2982,6 +2957,14 @@ n8n Workflow #1 — Входящие заявки:
       modalTitle.textContent = data.title;
       modalDescription.textContent = data.description;
       modalDuration.textContent = data.duration;
+
+      // Динамическая цена под каждый курс
+      const modalPriceNew = document.getElementById('modal-price-new');
+      const modalPriceOld = modalPriceNew ? modalPriceNew.nextElementSibling : null;
+      const modalDiscount  = modalPriceOld ? modalPriceOld.nextElementSibling : null;
+      if (modalPriceNew) modalPriceNew.textContent = data.price || '7 000₽';
+      if (modalPriceOld) modalPriceOld.textContent = data.priceOld || '12 000₽';
+      if (modalDiscount)  modalDiscount.textContent = data.discount || '-42%';
 
       // #12: Week timeline
       if (modalTimeline && data.timeline) {
